@@ -17,7 +17,7 @@ export async function getMarketPrice({ networkID, provider }: IBaseAsyncThunk) {
   const ohm_dai_address = jasmin_busd.getAddressForReserve(networkID);
   const pairContract = new ethers.Contract(ohm_dai_address, PairContract, provider);
   const reserves = await pairContract.getReserves();
-  const marketPrice = reserves[1] / reserves[0];
+  const marketPrice = reserves[0] / reserves[1];
   console.log("debug->marketpricee", reserves);
   // commit('set', { marketPrice: marketPrice / Math.pow(10, 9) });
   return marketPrice;
