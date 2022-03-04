@@ -199,7 +199,7 @@ function Stake() {
       .toFixed(4),
   );
   
-  const trimmedStakingAPY = trim(stakingAPY * 100, 1);
+  const trimmedStakingAPY = stakingAPY > 100000000 ? parseFloat(stakingAPY * 100 ) : trim(stakingAPY * 100, 3);
   const stakingRebasePercentage = trim(stakingRebase * 100, 4);
   const oldstakingRebasePercentage = trim(oldstakingRebase * 100, 4);
   const nextRewardValue = trim((stakingRebasePercentage / 100) * trimmedBalance, 4);
@@ -244,7 +244,9 @@ console.log('debug staking APY', stakingAPY)
                         </Typography>
                         <Typography variant="h4">
                           {stakingAPY ? (
-                            <>{new Intl.NumberFormat("en-US").format(trimmedStakingAPY)}%</>
+                            <Typography variant="h4" style={{"word-break":"break-all", "white-space":"break-spaces"}}>
+                              <>{new Intl.NumberFormat("en-US").format(trimmedStakingAPY)}%</>
+                            </Typography>
                             //<>{trimmedStakingAPY}%</>
                             //new Intl.NumberFormat("en-US", { notation: "scientific" }).format(stakingAPY)
                             // <>{new Intl.NumberFormat("en-US").format(trimmedStakingAPY)}%</>
