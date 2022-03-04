@@ -55,7 +55,7 @@ export const busd = new StableBond({
       reserveAddress: "0xe9e7cea3dedca5984780bafc599bd69add087d56",
     },
     [NetworkID.Testnet]: {
-      bondAddress: "0x2244f2B03dB027c09b55314908033dd65325AA9f",
+      bondAddress: "0xF601686cfBafd6CAb0aD1EEdCBFa4eB71a4CBD71",
       reserveAddress: "0x78867bbeef44f2326bf8ddd1941a4439382ef2a7",
     },
   },
@@ -93,12 +93,12 @@ export const jasmin_busd = new LPBond({
       reserveAddress: "0x9c96d18ae3acb917f3ce1e2e6df68ca860ea3cdc",
     },
     [NetworkID.Testnet]: {
-      bondAddress: "0xA5E82b3281302A6125a9039150B3202464A85662",
-      reserveAddress: "0x59cDeA270B5Ec84a0a6126C4c6f8dACE508429Ae",
+      bondAddress: "0x8DA3A6D2b53Cf702f8Dbcb4Be88B110407B469bf",
+      reserveAddress: "0xd6add54f64c8B5Aa665e2754b32fe8525Af02cD4",
     },
   },
   lpUrl:
-    "https://pancake.kiemtienonline360.com/#/add/0x78867bbeef44f2326bf8ddd1941a4439382ef2a7/0x51514f02CF40830277f9F44C03f6A617dc98Ec05",
+    "https://pancake.kiemtienonline360.com/#/add/0x78867bbeef44f2326bf8ddd1941a4439382ef2a7/0x9d7183FCDEC64CcE68905376da6efF2627AC3922",
 });
 
 export const frax = new StableBond({
